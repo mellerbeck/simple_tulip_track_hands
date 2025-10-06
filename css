@@ -1,0 +1,57 @@
+/* Apply border-box sizing only to what we use */
+#wrap,
+.stage,
+.controls,
+.controls button,
+.stage > canvas {
+  box-sizing: border-box;
+}
+
+.status,
+.stage,
+.controls {
+  margin-bottom: 8px;
+}
+
+.status {
+  font: 12px/1.4 monospace;
+  color: #0a0;
+  white-space: pre-wrap;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #111;
+}
+
+/* Completely hide the <video> */
+.stage > video {
+  display: none !important;
+}
+
+.stage > canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  background: #f6f6f6;
+  cursor: pointer;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.controls button:hover {
+  background: #eee;
+}
